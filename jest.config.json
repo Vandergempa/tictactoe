@@ -1,0 +1,12 @@
+{
+  "collectCoverageFrom": [
+    "**/*.{js}",
+    "!**/node_modules/**",
+    "!**/vendor/**"
+  ],
+  "verbose": true,
+  "testURL": "http://localhost/",
+  "transform": {
+    "^.+\\.js$": "babel-jest"
+  }
+}

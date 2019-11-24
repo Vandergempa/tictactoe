@@ -1,0 +1,21 @@
+#main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+
+
+  h1 {
+    margin: 0px 50px 50px 50px;
+    font-family: 'Bowlby One SC', cursive;
+    font-size: 75px;
+  }
+
+  h3 {
+    margin: 0px 50px 30px 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 35px;
+    font-weight: 100;
+  }
+}

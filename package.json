@@ -1,0 +1,28 @@
+{
+  "name": "tictactoe",
+  "version": "1.0.0",
+  "description": "miniproject for lyvly",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --config=jest.config.json --watchAll --no-cache --runInBand"
+  },
+  "author": "Tamas Bogdan",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "autoprefixer": "^9.7.1",
+    "babel-jest": "^24.9.0",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-terser": "^1.2.0",
+    "jest": "^24.9.0",
+    "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,31 @@
+.grid-container {
+  width: 400px;
+  height: 400px;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color: black;
+}
+
+.grid-item {
+  background-color: white;
+  padding: 10px;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 90px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten($color, 30%);
+  }
+}
+
+.winner {
+  color: darken(red, 5%);
+}
+
+.draw {
+  color: lighten(black, 35%);
+}

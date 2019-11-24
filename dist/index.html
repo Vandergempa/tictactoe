@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic tac toe mini-project</title>
+  <script src="https://kit.fontawesome.com/f10f62a704.js" crossorigin="anonymous"></script>
+  <link
+    href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Open+Sans:300|Pacifico|Permanent+Marker&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/styles/styles.css" />
+</head>
+
+<body>
+  <div id="main-container">
+    <h1>Tic Tac Toe</h1>
+    <h3>Noone can beat me, but feel free to try :)</h3>
+    <div class="dropdown-el">
+      <input type="radio" name="gameType" value="humancomputer" checked="checked" id="type-humancomputer"><label
+        for="type-humancomputer">Human vs.
+        computer</label>
+      <input type="radio" name="gameType" value="humanhuman" id="type-humanhuman"><label for="type-humanhuman">Human vs.
+        human</label>
+      <input type="radio" name="gameType" value="computercomputer" id="type-computercomputer"><label
+        for="type-computercomputer">Computer vs.
+        computer</label>
+    </div>
+    <div class="grid-container">
+      <div class="grid-item" id="0"></div>
+      <div class="grid-item" id="1"></div>
+      <div class="grid-item" id="2"></div>
+      <div class="grid-item" id="3"></div>
+      <div class="grid-item" id="4"></div>
+      <div class="grid-item" id="5"></div>
+      <div class="grid-item" id="6"></div>
+      <div class="grid-item" id="7"></div>
+      <div class="grid-item" id="8"></div>
+    </div>
+    <div class="bottom-container">
+      <button class="bottom-container__iconcont 0">
+        <i class="fas fa-user-alt fa-6x 0"></i>
+        <h5>Human starts(X)</h5>
+      </button>
+      <h4>Select starting player</h4>
+      <button class="bottom-container__iconcont 1">
+        <i class="fas fa-desktop fa-6x 1"></i>
+        <h5>Computer starts(O)</h5>
+      </button>
+    </div>
+  </div>
+
+  <script type="module" src="js/script.js"></script>
+</body>
+
+</html>
