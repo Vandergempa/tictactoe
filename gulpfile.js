@@ -4,12 +4,18 @@ const { src, dest, watch, series, parallel } = require('gulp');
 const browsersync = require("browser-sync").create();
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
-const concat = require('gulp-concat');
 const terser = require('gulp-terser')
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const webpack = require('webpack-stream')
+
+// Set production flag
+var isProduction = false;
+console.log(process.argv)
+if (process.argv.includes("--production")) {
+  isProduction = true;
+}
 
 // For serving up a static directory
 function browserSync(done) {
@@ -18,13 +24,13 @@ function browserSync(done) {
       baseDir: "./dist/"
     },
     port: 8888
-  });
+  })
   done();
 }
 
 // Function to reload browserSync
 function browserSyncReload(done) {
-  browsersync.reload();
+  browsersync.reload()
   done();
 }
 
@@ -72,11 +78,11 @@ function jsTask() {
 function watchTask() {
   watch(
     [files.htmlPath, files.scssPath, files.jsPath],
-    parallel(htmlTask, scssTask, jsTask, browserSyncReload)
+    parallel(htmlTask, scssTask, jsTask, !isProduction ? browserSyncReload : function vmi () {})
   )
 }
 
 // The main gulp task that gets run by typing gulp in the cl.
 exports.default = series(
   parallel(htmlTask, scssTask, jsTask),
-  parallel(watchTask, browserSync))
+  parallel(watchTask, !isProduction ? browserSync : function vmi () {}))
