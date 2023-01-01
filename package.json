@@ -24,7 +24,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-terser": "^1.2.0",
     "jest": "^24.9.0",
-    "webpack-stream": "^5.2.1"
+    "webpack-stream": "^7.0.0"
   },
   "dependencies": {}
 }
